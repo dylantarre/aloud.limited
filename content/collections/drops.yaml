@@ -1,0 +1,13 @@
+title: Drops
+template: drops/show
+layout: layout
+taxonomies:
+  - shirt_color
+  - availability
+revisions: false
+route: 'drops/{slug}'
+date: true
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private

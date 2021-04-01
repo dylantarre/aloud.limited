@@ -1,0 +1,47 @@
+<div class="mx-auto">
+    <div class="grid grid-flow-col grid-cols-2 items-center">
+        <img src="{{ featured_image }}" class="rounded-3xl">
+        <div class="ml-12 items-center">
+ 
+            <h1 class="text-5xl mb-2">{{ title }}</h1>
+            {{ color }}
+            <div>
+                 <a href="{{ slug }}"style="background-image: url('{{ swatch }}');" class="hover:bg-red-800 text-white text-xl px-3 py-px rounded-full">{{ title }}</a> 
+                 <a class="text-sm ml-2 align-middle text-gray-600">💧 Dropped on {{ date }}</a>
+             </div> 
+            {{ /color }}
+            <div class="flex  my-6">
+                <div class="">
+                    <h3 class=" text-lg ml-2">{{ proverb }}</h3> 
+                </div>
+               
+            </div> 
+        </div>
+        
+    </div>
+    <div class="grid grid-flow-col grid-cols-2 items-center">
+        {{ if availability }} 
+            <div class="flex space-x-3 mt-8 font-semibold tracking-widest uppercase mx-auto">
+                <p>What's for sale?</p>
+                {{ availability }} 
+                    <a href="{{ url }}" class="bg-black hover:bg-red-800 text-white px-3 py-px rounded-full">{{ title }}</a>
+                {{ /availability }}
+            </div>
+        {{ /if }}
+    </div>
+    <div class="space-y-12 mb-12">
+        {{ featured_copy }}
+    </div>
+    {{ if related_posts }}
+    <aside class="border-t-8 border-black my-24 py-8 max-w-2xl mx-auto">
+            <h3 class="text-2xl font-black">Check out these other designs</h3>
+                <div class="grid grid-flow-col grid-cols-2 gap-8 mt-16 mb-16">
+                    {{ related_posts }}
+                        {{ partial:card}}
+                    {{ /related_posts }}
+                </div>
+            </aside>
+
+    </aside>
+    {{ /if }}
+</div>

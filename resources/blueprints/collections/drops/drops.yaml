@@ -1,0 +1,167 @@
+title: Drops
+sections:
+  main:
+    display: Info
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: proverb
+        field:
+          always_show_set_button: false
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - removeformat
+            - quote
+            - anchor
+            - image
+            - table
+            - h1
+            - horizontalrule
+          container: assets
+          save_html: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: true
+          fullscreen: true
+          allow_source: true
+          enable_input_rules: true
+          enable_paste_rules: true
+          display: Proverb
+          type: bard
+          icon: bard
+          listable: hidden
+      -
+        handle: author
+        field:
+          mode: select
+          display: Author
+          type: users
+          icon: users
+          listable: hidden
+          max_items: 1
+      -
+        handle: color
+        field:
+          mode: default
+          collections:
+            - colors
+          display: 'Color Parallels'
+          type: entries
+          icon: entries
+          listable: hidden
+      -
+        handle: dom_color
+        field:
+          theme: classic
+          lock_opacity: false
+          default_color_mode: HEXA
+          color_modes:
+            - HEXA
+          display: 'Dom Color'
+          type: color
+          icon: color
+          listable: hidden
+      -
+        handle: related_posts
+        field:
+          mode: default
+          collections:
+            - drops
+          display: 'Related Posts'
+          type: entries
+          icon: entries
+          listable: hidden
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          localizable: true
+          validate:
+            - required
+      -
+        handle: date
+        field:
+          type: date
+          required: true
+          validate:
+            - required
+      -
+        handle: shirt_color
+        field:
+          type: terms
+          taxonomies:
+            - shirt_color
+          display: 'Shirt Color'
+          mode: select
+      -
+        handle: availability
+        field:
+          type: terms
+          taxonomies:
+            - availability
+          display: Availability
+          mode: select
+  assets:
+    display: Assets
+    fields:
+      -
+        handle: featured_image
+        field:
+          mode: grid
+          container: assets
+          restrict: false
+          allow_uploads: true
+          max_files: 1
+          display: 'Featured Image'
+          type: assets
+          icon: assets
+          listable: hidden
+      -
+        handle: parallel_images
+        field:
+          mode: grid
+          restrict: false
+          allow_uploads: true
+          display: 'Parallel Images'
+          type: assets
+          icon: assets
+          listable: hidden
+  meta:
+    display: Meta
+    fields:
+      -
+        handle: meta_title
+        field:
+          input_type: text
+          character_limit: 60
+          antlers: false
+          display: 'Meta Title'
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: meta_description
+        field:
+          placeholder: '160'
+          antlers: false
+          display: 'Meta Description'
+          type: textarea
+          icon: textarea
+          listable: hidden
