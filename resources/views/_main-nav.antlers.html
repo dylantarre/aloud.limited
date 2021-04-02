@@ -15,11 +15,11 @@
         <a href="/drops"><img src="/assets/Aloud@4x.png" alt="" class="w-32"></a>
     </div>
 
-    <ul class=" flex  w-0 sm:w-auto space-x-6 lg:space-x-10  font-normal mt-2 invisible">
-      {{ nav:collection:pages }}
-        <li><a href="{{ url }}" class="text-xl py-2 block {{ is_current || is_parent ?= 'text-pink-700 ' }}" >{{ title }}</a></li>
-      {{ /nav:collection:pages }}
-    </ul>
+    <div class=" flex font-normal mt-2 px-3 py-px rounded-full">
+      <form action="/search">
+      <input type="search" name="q" class="mt-2 align-middle border-2 border-g-100 px-2 h-8 rounded-full placeholder-grey font-normal my-auto ">
+      </form>
+     </div>
    
   </div>
        

@@ -5,5 +5,10 @@ id: 378a5f3c-a5f0-421e-b147-6b97b6091aca
 password_hash: $2y$10$VJnq5ytFJnBDz7PucchTkOnojTVK2./EzlIGDJQtAYy7cVadXle5y
 preferences:
   collections:
-    pages:
-      after_save: create_another
+    drops:
+      columns:
+        - title
+        - color
+        - slug
+        - date
+        - availability

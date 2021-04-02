@@ -1,15 +1,15 @@
 <div class="mx-auto">
-    <div class="grid grid-flow-col grid-cols-2 items-center">
-        <img src="{{ featured_image }}" class="rounded-3xl">
-        <div class="ml-12 items-center">
+    <div class="grid sm:grid-cols-2  items-center gap-8 ">
+        <img src="{{ featured_image }}" class="rounded-3xl ">
+        <div class="ml-4">
  
             <h1 class="text-5xl mb-2">{{ title }}</h1>
-            {{ color }}
-            <div>
-                 <a href="{{ slug }}"style="background-image: url('{{ swatch }}');" class="hover:bg-red-800 text-white text-xl px-3 py-px rounded-full">{{ title }}</a> 
-                 <a class="text-sm ml-2 align-middle text-gray-600">💧 Dropped on {{ date }}</a>
+            
+            <div class="flex ">
+                    {{ partial:color_tag }}
+                 <a class="text-sm ml-2 mt-1 align-middle text-gray-600">💧 Dropped {{ date }}</a>
              </div> 
-            {{ /color }}
+            
             <div class="flex  my-6">
                 <div class="">
                     <h3 class=" text-lg ml-2">{{ proverb }}</h3> 

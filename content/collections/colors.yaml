@@ -1,8 +1,8 @@
 title: Colors
-template: colors/show
+template: colors/index
 layout: layout
 revisions: false
-route: 'colors/{slug}'
+route: colors/
 sort_dir: asc
 date_behavior:
   past: public
