@@ -1,17 +1,17 @@
-<div class="class max-w-4xl mx-auto">
+<div class="class mx-auto">
 
-    {{ collection:drops paginate="2" as="posts" }}
-        <div class="grid grid-flow-col grid-cols-2 gap-8 mb-16">
+    {{ collection:drops paginate="6" as="posts" }}
+        <div class="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-16">
         {{ posts }}
             {{ partial:card}}
         {{ /posts }}
         </div>
-
+        
         {{ paginate }}
             <div class="flex items-center justify-center space-x-8 text-center mx-auto">
-                <a href="{{ prev_page }}" class="href">👈</a>
+                <a href="{{ prev_page }}" class="p-4 border-gray-400 shadow hover:shadow-lg transition rounded-xl">👈 </a>
                    
-                <a href="{{ next_page }}" class="href">👉</a>
+                <a href="{{ next_page }}" class="p-4 border-gray-400 shadow hover:shadow-lg transition rounded-xl">👉</a>
             </div>
         {{ /paginate }}
     {{ /collection:drops }}

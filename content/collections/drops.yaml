@@ -2,8 +2,7 @@ title: Drops
 template: drops/show
 layout: layout
 taxonomies:
-  - shirt_color
-  - availability
+  1: availability
 revisions: false
 route: 'drops/{slug}'
 date: true

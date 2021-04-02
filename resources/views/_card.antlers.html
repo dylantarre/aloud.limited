@@ -1,19 +1,25 @@
-<a href="{{ url }}" class="w-full h-full border-gray-400 shadow hover:shadow-lg transition rounded-xl">
+<a href="{{ url }}" class="w-full h-full border-gray-400 shadow hover:shadow-lg transition rounded-xl transform transition duration-200 hover:scale-105">
     <div class="rounded-t-xl overflow-hidden">
         <img src="{{ featured_image }}" alt="{{ featured_image:alt }}" class="overflow-hidden transform transition duration-200 hover:scale-110"> 
     </div>
-    <div class="container flex justify-between mx-auto">
+    <div class="container flex justify-between mx-auto ">
         <article class="w-full p-4">
-            <div class="float-right space-x-3 mt-1 ml-4 font-bold tracking-widest uppercase">
+            <div class="float-right mt-1 ml-4 font-normal tracking-widest uppercase">
                 
                 {{ color }} 
-                
-                    <p style="background-image: url('{{ swatch }}');" class="hover:bg-red-800 text-white px-3 py-px rounded-full">{{ title }}</p>
-                
+                    <p style="background-image:url('{{ swatch }}');" class="
+                        hover:shadow-lg transition rounded-xl transform transition duration-200 hover:scale-110
+                        {{ if title === "White" }}
+                        text-black shadow
+                        {{ else }}
+                        text-white 
+                        {{ /if }}
+                        px-3 py-px rounded-full">{{ title }}
+                    </p>
                 {{ /color }}
                 
             </div>
-            <h2 class="text-2xl font-bold leading-tight">{{ title }}</h2>
+            <h2 class="text-2xl font-normal">{{ title }}</h2>
             <div class="flex items-center mt-2">
                     <p class="text-sm text-right text-gray-600">💧 {{ date }}</p>
             </div>

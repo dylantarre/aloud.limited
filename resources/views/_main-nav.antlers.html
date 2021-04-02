@@ -1,20 +1,27 @@
-<nav class="py-1a2">
-  <div class="container flex justify-between mx-auto">
-      <ul class=" flex float-left space-x-10  font-normal mt-2 mb-16">
-        {{ nav:collection:pages }}
-          <li><a href="{{ url }}" class="text-xl py-2 block {{ is_current || is_parent ?= 'text-pink-700 ' }}" >{{ title }}</a></li>
-        {{ /nav:collection:pages }}
-      </ul>
-    <div class="">
+
+
+
+<nav class=" sm:mb-8 md:mb-12 lg:mb-16 ">
+
+  <div class="flex justify-between">
+    
+    <ul class=" flex w-0 sm:w-auto space-x-6 lg:space-x-10  font-normal mt-2 invisible sm:visible">
+      {{ nav:collection:pages }}
+        <li><a href="{{ url }}" class="text-xl py-2 block {{ is_current || is_parent ?= 'text-pink-700 ' }}" >{{ title }}</a></li>
+      {{ /nav:collection:pages }}
+    </ul>
+
+    <div class="relative ">
         <a href="/drops"><img src="/assets/Aloud@4x.png" alt="" class="w-32"></a>
     </div>
 
-    <ul class=" flex float-left space-x-10  font-normal mt-2 mb-16">
+    <ul class=" flex  w-0 sm:w-auto space-x-6 lg:space-x-10  font-normal mt-2 invisible">
       {{ nav:collection:pages }}
-        <li><a href="{{ url }}" class="text-xl py-2 block {{ is_current || is_parent ?= 'text-pink-700' }}" >{{ title }}</a></li>
+        <li><a href="{{ url }}" class="text-xl py-2 block {{ is_current || is_parent ?= 'text-pink-700 ' }}" >{{ title }}</a></li>
       {{ /nav:collection:pages }}
     </ul>
    
   </div>
+       
 
 </nav>

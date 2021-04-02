@@ -11,22 +11,9 @@ sections:
           validate:
             - required
       -
-        handle: color
-        field:
-          theme: classic
-          lock_opacity: false
-          default_color_mode: HEXA
-          color_modes:
-            - HEXA
-          display: Color
-          type: color
-          icon: color
-          listable: hidden
-      -
         handle: swatch
         field:
           mode: grid
-          container: assets
           restrict: false
           allow_uploads: true
           max_files: 1
