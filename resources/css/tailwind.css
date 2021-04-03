@@ -9,3 +9,8 @@
 @import "tailwindcss/components";
 
 @import "tailwindcss/utilities";
+
+.bg-pattern {
+
+    background-image: url('https://www.transparenttextures.com/patterns/soft-wallpaper.png');
+}

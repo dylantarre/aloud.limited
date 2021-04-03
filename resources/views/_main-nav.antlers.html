@@ -1,25 +1,25 @@
 
 
 
-<nav class=" sm:mb-8 md:mb-12 lg:mb-16 ">
+<nav class=" 	sm:mb-8 md:mb-12 lg:mb-16 ">
 
   <div class="flex justify-between">
     
     <ul class=" flex w-0 sm:w-auto space-x-6 lg:space-x-10  font-normal mt-2 invisible sm:visible">
       {{ nav:collection:pages }}
-        <li><a href="{{ url }}" class="text-xl py-2 block {{ is_current || is_parent ?= 'text-pink-700 ' }}" >{{ title }}</a></li>
+        <li><a href="{{ url }}" class="text-xl py-2 block {{ is_current || is_parent ?= 'text-pink-700' }}" >{{ title }}</a></li>
       {{ /nav:collection:pages }}
     </ul>
 
-    <div class="relative ">
-        <a href="/drops"><img src="/assets/Aloud@4x.png" alt="" class="w-32"></a>
+    <div class="relative  mx-auto">
+        <a href="/drops"><img src="/assets/Aloud@4-stroke.png" alt="" class="w-36 transform transition duration-100 active:scale-95 hover:scale-125 hover:rotate-1"></a>
     </div>
 
-    <div class=" flex font-normal mt-2 px-3 py-px rounded-full">
-      <form action="/search">
-      <input type="search" name="q" class="mt-2 align-middle border-2 border-g-100 px-2 h-8 rounded-full placeholder-grey font-normal my-auto ">
-      </form>
-     </div>
+    <ul class=" flex w-0 sm:w-auto space-x-6 lg:space-x-10  font-normal mt-2 invisible ">
+      {{ nav:collection:pages }}
+        <li><a href="{{ url }}" class="text-xl py-2 block {{ is_current || is_parent ?= 'text-pink-700 ' }}" >{{ title }}</a></li>
+      {{ /nav:collection:pages }}
+    </ul>
    
   </div>
        

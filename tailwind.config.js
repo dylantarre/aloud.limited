@@ -8,16 +8,17 @@ module.exports = {
     },
     important: true,
     theme: {
-      extend: {},
+      extend: {
+
+        
+
+      },
       
       fontFamily: {
         sans: ['Rubik', 'sans-serif'],
         heading: ['Rubik', 'sans-serif'],
       },
-      backgroundImage: theme => ({
-        'swatch': "url('{{ swatch }}')",
-        
-       })
+   
     },
     variants: {},
     plugins: [],
