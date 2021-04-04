@@ -1,14 +1,26 @@
 <div class="mx-auto">
-    <h1 class="text-4xl font-bold mb-8">Drops matching "{{ get:q }}"</h1>
-    {{ search:results as="results" }}
+   
+    {{ search:results lg:paginate="8" md:paginate="6" sm:paginate="3" as="results" }}
         {{ if results }}
-            <ul class="space-y-4">
+        <h1 class="text-4xl font-bold mb-8">Drops matching "{{ get:q }}"</h1>
+            <div class="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-16">
                 {{ results }}
-                    <li><a href="{{ url }}" class="font-bold text-red-500">{{ title }}</a></li>
+                    
+                {{ partial:card }}
+
                 {{ /results }}
-            </ul>
-            {{else}}
-            No results available
+            </div>
+
+                {{ paginate }}
+                <div class="flex items-center justify-center space-x-8 text-center mx-auto">
+                    <a href="{{ prev_page }}" class="p-4 border-gray-400 shadow hover:shadow-lg transition rounded-xl bg-white">👈 </a>
+                       
+                    <a href="{{ next_page }}" class="p-4 border-gray-800 shadow hover:shadow-lg transition rounded-xl bg-white">👉</a>
+                </div>
+            {{ /paginate }}
+                {{else}}
+                <h1 class="text-4xl font-bold mb-8">No drops matching "{{ get:q }}"</h1>
+            Try searching for a <b>pattern name</b> or <b>shirt color</b>.
         {{ /if }}
     {{ /search:results }}
   </div>
