@@ -11,14 +11,12 @@ sections:
           validate:
             - required
       -
-        handle: color
+        handle: color_tag
         field:
           mode: default
-          collections:
-            - colors
-          display: Color
-          type: entries
-          icon: entries
+          display: 'Color Tag'
+          type: taxonomies
+          icon: taxonomy
           listable: hidden
       -
         handle: featured_image
@@ -119,4 +117,12 @@ sections:
           taxonomies:
             - availability
           display: Availability
+          mode: select
+      -
+        handle: color_tags
+        field:
+          type: terms
+          taxonomies:
+            - color_tags
+          display: Color
           mode: select

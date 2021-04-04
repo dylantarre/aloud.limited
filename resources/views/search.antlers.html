@@ -1,0 +1,15 @@
+<div class="mx-auto">
+    <h1 class="text-4xl font-bold mb-8">Drops matching "{{ get:q }}"</h1>
+    {{ search:results as="results" }}
+        {{ if results }}
+            <ul class="space-y-4">
+                {{ results }}
+                    <li><a href="{{ url }}" class="font-bold text-red-500">{{ title }}</a></li>
+                {{ /results }}
+            </ul>
+            {{else}}
+            No results available
+        {{ /if }}
+    {{ /search:results }}
+  </div>
+  

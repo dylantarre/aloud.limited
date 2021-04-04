@@ -1,0 +1,34 @@
+title: Color
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: swatch
+        field:
+          mode: grid
+          container: assets
+          restrict: false
+          allow_uploads: false
+          max_files: 1
+          display: Swatch
+          type: assets
+          icon: assets
+          listable: hidden
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          required: true
+          validate:
+            - required

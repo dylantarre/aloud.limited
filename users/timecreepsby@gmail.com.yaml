@@ -12,3 +12,9 @@ preferences:
         - slug
         - date
         - availability
+  taxonomies:
+    color_tags:
+      columns:
+        - title
+        - slug
+        - swatch

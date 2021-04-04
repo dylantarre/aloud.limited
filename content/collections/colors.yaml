@@ -1,9 +1,0 @@
-title: Colors
-template: colors/index
-layout: layout
-revisions: false
-route: colors/
-sort_dir: asc
-date_behavior:
-  past: public
-  future: private
