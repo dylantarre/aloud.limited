@@ -9,22 +9,20 @@
                     {{ partial:color_tag }}
                  <a class="text-sm ml-2 mt-1 align-middle text-gray-600">💧 Dropped {{ date }}</a>
              </div> 
-            
             <div class="flex  my-6">
                 <div class="">
                     <div class=" text-md ml-2">{{ proverb }}</div> 
                 </div>
-               
             </div> 
         </div>
-        
     </div>
     <div class="grid grid-flow-col grid-cols-2 items-center">
         {{ if availability }} 
             <div class="flex space-x-3 mt-8 font-semibold tracking-widest uppercase mx-auto">
-                <p>What's for sale?</p>
+                
                 {{ availability }} 
-                    <a href="{{ url }}" class="bg-black hover:bg-red-800 text-white px-3 py-px rounded-full">{{ title }}</a>
+                    <p>What's for sale?</p>
+                    <a href="{{ url }}" class="bg-black hover:bg-red-800 text-white px-3 py-px rounded-md">{{ title }}</a>
                 {{ /availability }}
             </div>
         {{ /if }}
