@@ -10,6 +10,16 @@
 
 @import "tailwindcss/utilities";
 
+.tooltip {
+    @apply invisible absolute;
+  }
+  
+  .has-tooltip:hover .tooltip {
+    @apply visible z-50
+  }
+  
+
+
 .bg-pattern {
 
     background-image: url('https://www.transparenttextures.com/patterns/soft-wallpaper.png');
