@@ -31,6 +31,17 @@ sections:
           icon: assets
           listable: hidden
       -
+        handle: more_images
+        field:
+          mode: grid
+          container: assets
+          restrict: false
+          allow_uploads: true
+          display: 'More Images'
+          type: assets
+          icon: assets
+          listable: hidden
+      -
         handle: proverb
         field:
           always_show_set_button: false
@@ -73,25 +84,6 @@ sections:
           type: entries
           icon: entries
           listable: hidden
-      -
-        handle: meta_title
-        field:
-          input_type: text
-          character_limit: 60
-          antlers: false
-          display: 'Meta Title'
-          type: text
-          icon: text
-          listable: hidden
-      -
-        handle: meta_description
-        field:
-          placeholder: '160'
-          antlers: false
-          display: 'Meta Description'
-          type: textarea
-          icon: textarea
-          listable: hidden
   sidebar:
     display: Sidebar
     fields:
@@ -126,3 +118,25 @@ sections:
             - color_tags
           display: Color
           mode: select
+  meta:
+    display: Meta
+    fields:
+      -
+        handle: meta_description
+        field:
+          placeholder: '160'
+          antlers: false
+          display: 'Meta Description'
+          type: textarea
+          icon: textarea
+          listable: hidden
+      -
+        handle: meta_title
+        field:
+          input_type: text
+          character_limit: 60
+          antlers: false
+          display: 'Meta Title'
+          type: text
+          icon: text
+          listable: hidden
