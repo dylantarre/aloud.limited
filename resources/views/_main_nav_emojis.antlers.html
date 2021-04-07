@@ -1,5 +1,5 @@
         <ul class="flex sm:w-auto space-x-5 lg:space-x-10 mx-auto md:mx-0 font-normal md:mt-2  sm:visible"> 
           {{ nav:collection:pages }}
-            <li><a href="{{ url }}" class="text-xl py-1 block p-2 mt-2.5 rounded-md bg-white border-gray-400 shadow hover:shadow-md transform transition duration-200 hover:scale-105 {{ is_current || is_parent ?= 'bg-purple-700 font-medium' }}" >{{ emoji }}</a></li>
+            <li><a href="{{ url }}" class="text-xl py-1 block p-2 mt-2.5 rounded-md bg-white border-gray-400 shadow hover:shadow-md transform transition duration-200 hover:scale-125 active:bg-purple-800 hover:border-indigo-500  border-white border {{ is_current || is_parent ?= 'bg-purple-700 font-medium' }}" >{{ emoji }}</a></li>
           {{ /nav:collection:pages }}
         </ul>
