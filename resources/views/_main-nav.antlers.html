@@ -1,25 +1,26 @@
 <nav class="mb-8">
- <div class="flex mb-8 md:mb-10 lg:mb-12">
+ <div class="flex mb-8 md:mb-10 lg:mb-12 ">
     <div class="w-1/3 hidden sm:flex"> 
           {{ partial:main_nav_titles }}
       </div>
     
-      <div class="w-1/2 sm:w-1/3 sm:mx-auto mx-0">
-        <a href="/drops"><img src="/assets/Aloud@4-stroke.png" alt="" class="mx-auto w-36 transform transition duration-100 active:scale-95 hover:scale-125 hover:rotate-1"></a>
+      <div class="w-1/2 sm:w-1/3 -ml-1 md:-ml-0 sm:mx-auto ">
+        <a href="/drops"><img src="/assets/Aloud@4-stroke.png" alt="" class="md:mx-auto w-36 transform transition duration-100 active:scale-95 hover:scale-125 hover:rotate-1"></a>
       </div>
 
       
       
-      <div class=" sm:block sm:w-1/3 opacity-90 hover:opacity-100">
-        <div class=" sm:flex float-right ">
+      <div class=" w-1/2 sm:w-1/3 opacity-90 hover:opacity-100 ">
+        <div class="flex float-right ">
           {{ partial:search_bar }}
         </div>
+ 
       </div>  
     </div> 
-    <div class="grid w-auto grid-cols-2 -mt-4 -mb-2 sm:hidden">
+    <div class="flex w-auto -mt-4 -mb-2 ml-4 sm:hidden">
       <div class="text-center text-2xl">{{ title }}</div>
 
-      <div class="flex sm:hidden -mt-2.5 w-1/2 mx-4"> 
+      <div class="w-full sm:hidden -mt-3 w-1/2 mr-4"> 
         {{ partial:main_nav_emojis }}
       </div>
     </div>
