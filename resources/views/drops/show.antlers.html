@@ -1,12 +1,12 @@
 <div class="mx-auto">
     <div class="grid sm:grid-cols-2  items-center gap-8 ">
-        <img src="{{ featured_image }}" class="rounded-3xl ">
+        <img src="{{ featured_image }}" class="rounded-xl ">
         <div class="ml-4">
  
-            <h1 class="text-5xl mb-2">{{ title }}</h1>
+            <h1 class="hidden sm:block text-5xl mb-2">{{ title }}</h1>
             
             <div class="flex ">
-                    {{ partial:color_tag }}
+                    <a href="http://aloud.test/search?q={{ color_tags }}{{ title }}{{/color_tags}}">{{ partial:color_tag }}</a> 
                  <a class="text-sm ml-2 mt-1 align-middle text-gray-600">💧 Dropped {{ date }}</a>
              </div> 
             <div class="flex  my-6">
@@ -14,8 +14,8 @@
                     <div class=" text-md">{{ proverb }}</div> 
                 </div>
             </div> 
-            <div class="sm:w-auto xl:w-max px-4 pt-4 pb-1 mr-4 rounded-md bg-white ">
-                <button type="button" class="w-full lg:w-auto mb-3 items-center mr-2 px-4 py-2 border border-transparent hover:shadow-md  text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transform transition duration-100 active:scale-95 hover:scale-105">
+            <div class="sm:w-auto xl:w-max px-4 pt-4 pb-1 mr-4 rounded-md bg-white bg-opacity-50 ">
+                <button type="button" class="w-full lg:w-auto mb-3 items-center mr-2 px-4 py-2 border border-transparent hover:shadow-md  text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-500   focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transform transition duration-100 active:scale-95 hover:scale-105">
                     🌱&#160; Mint This Tee
                 </button>
 
