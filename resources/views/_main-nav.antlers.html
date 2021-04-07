@@ -1,26 +1,32 @@
+<nav class="flex mb-8 md:mb-10 lg:mb-12 ">
+    <div class="w-1/3 "> 
+      <div class="hidden sm:flex">
+        {{ partial:main_nav_titles }}
+      </div>
+      <div class="flex sm:hidden -ml-10"> 
+        {{ partial:main_nav_emojis }}
+      </div>
+   </div>
+   
 
 
-
-<nav class=" 	sm:mb-8 md:mb-12 lg:mb-16 ">
-
-  <div class="flex ">
-    <div class="w-1/3">
-      <ul class="w-1/3 flex w-0 sm:w-auto space-x-6 lg:space-x-10  font-normal mt-2 invisible sm:visible">
-        {{ nav:collection:pages }}
-          <li><a href="{{ url }}" class="text-xl py-2 block {{ is_current || is_parent ?= 'text-purple-700 font-medium' }}" >{{ title }}</a></li>
-        {{ /nav:collection:pages }}
-      </ul>
-    </div>
-    <div class="relative w-auto mx-auto">
+    <div class=" mx-auto">
         <a href="/drops"><img src="/assets/Aloud@4-stroke.png" alt="" class="w-36 transform transition duration-100 active:scale-95 hover:scale-125 hover:rotate-1"></a>
     </div>
     
     
-    <div class="w-1/3 opacity-90">
-      {{ partial:search_bar }}
+    <div class="w-1/3 opacity-90 hover:opacity-100">
+      
+      <div class="hidden sm:flex float-right ">
+        {{ partial:search_bar }}
+      </div>
+      <div class="flex sm:hidden float-right "> 
+        {{ partial:search_bar_sm }}
+      </div>
+
     </div>
    
-  </div>
+  
        
 
 </nav>

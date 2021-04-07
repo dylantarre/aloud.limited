@@ -1,7 +1,7 @@
 <div class="class mx-auto">
 
     {{ collection:drops lg:paginate="8" md:paginate="6" sm:paginate="3" as="posts" }}
-        <div class="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-16">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-16">
         {{ posts }}
             {{ partial:card}}
         {{ /posts }}
