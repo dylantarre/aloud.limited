@@ -1,9 +1,9 @@
-<div class="mx-auto block w-full">
+<div class="mx-auto w-full">
    
     {{ search:results lg:paginate="8" md:paginate="6" sm:paginate="3" as="results" }}
         {{ if results }}
-        <h1 class="text-4xl text-center font-bold mb-8">Drops matching "{{ get:q }}"</h1>
-            <div class="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-16">
+        <h1 class="text-4xl text-center font-bold mb-8 -mt-6">Drops matching "{{ get:q }}"</h1>
+            <div class="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2x:grid-cols-4 gap-8 mb-16">
                 {{ results }}
                     
                 {{ partial:card }}
@@ -14,8 +14,8 @@
             {{ partial:paginate }}  
 
                 {{else}}
-                <h1 class="text-4xl font-bold mb-8">No drops matching "{{ get:q }}"</h1>
-            Try searching for a <b>shirt color</b> or <b>pattern name</b>.
+                <h1 class="text-4xl font-bold text-center mb-8">No drops matching "{{ get:q }}"</h1>
+                <p class="text-center my-28"> Try searching for a <b>shirt color</b> or <b>pattern name</b>.</p>
         {{ /if }}
     {{ /search:results }}
   </div>

@@ -14,5 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::statamic('search', 'search', [
-   'title' => 'Search Results'
+   'title' => 'Search'
  ]);
+
+ Route::statamic('nft', 'nft', [
+    'title' => 'NFTs'
+  ]);
+ 
+  Route::statamic('tees', 'tees', [
+    'title' => 'T-Shirts'
+  ]);
+ 
