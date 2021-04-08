@@ -1,0 +1,9 @@
+title: Press
+template: default
+layout: layout
+revisions: false
+route: '/press/{slug}'
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private

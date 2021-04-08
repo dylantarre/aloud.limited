@@ -28,7 +28,7 @@ return [
         'default' => [
             'driver' => 'local',
             'searchables' => 'collection:drops',
-            'fields' => ['title', 'color_tags'],
+            'fields' => ['title', 'color_tags','availability'],
         ],
 
         // 'blog' => [
