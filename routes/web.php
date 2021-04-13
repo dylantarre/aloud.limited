@@ -24,4 +24,8 @@ Route::statamic('search', 'search', [
   Route::statamic('tees', 'tees', [
     'title' => 'T-Shirts'
   ]);
+
+  Route::statamic('faq', 'faq', [
+    'title' => 'FAQ'
+  ]);
  

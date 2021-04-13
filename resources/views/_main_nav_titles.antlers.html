@@ -1,5 +1,5 @@
 <ul class="flex sm:w-auto space-x-6 lg:space-x-10 mx-auto md:mx-0 md:mt-2  sm:visible"> 
-    {{ nav:collection:pages }}
-    <nobr><li><a href="{{ url }}" class="text-xl py-2 block hover:text-purple-500 font-light {{ is_current ?= 'text-purple-700' }}" >{{ title }}</a></li></nobr>
-    {{ /nav:collection:pages }}
-  </ul>
+  {{ nav:collection:pages }}
+    <li><a href="{{ url }}" class="text-xl py-2 block hover:text-purple-500 font-light {{ is_current ?= 'text-purple-700' }}" >{{ title }}</a></li>
+  {{ /nav:collection:pages }}
+</ul>
